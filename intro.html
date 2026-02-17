@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="id">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Valentine's Day — Untuk Widya Maharani</title>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<style>
+		:root{
+			--bg:#fff0f4;
+			--card:#ffffff;
+			--accent:#ff6b9a;
+			--accent-2:#ff4d7a;
+			--muted:#6b6b6b;
+		}
+		*{box-sizing:border-box}
+		body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial; margin:0; background:linear-gradient(180deg,var(--bg),#fff); color:#222}
+		.container{max-width:960px;margin:32px auto;padding:20px}
+		header{display:flex;align-items:center;gap:16px}
+		.logo{width:84px;height:84px;border-radius:18px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:28px;box-shadow:0 6px 18px rgba(255,77,122,.18);overflow:hidden}
+		.logo-img{width:100%;height:100%;object-fit:cover;display:block}
+		h1{margin:0;font-size:28px}
+		p.lead{margin:6px 0 18px;color:var(--muted)}
+
+		.hero{background:linear-gradient(90deg, rgba(255,107,154,.06), rgba(255,77,122,.03));padding:28px;border-radius:14px;display:flex;gap:20px;align-items:center}
+		.hero .text{flex:1}
+		.hero h2{margin:0 0 8px;font-size:22px;color:var(--accent-2)}
+		.cta{display:inline-block;padding:10px 16px;background:var(--accent);color:#fff;border-radius:12px;text-decoration:none;font-weight:600;box-shadow:0 6px 14px rgba(255,77,122,.12)}
+
+		.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:20px}
+		.photo{border-radius:12px;overflow:hidden;display:flex;align-items:center;justify-content:center;height:160px;box-shadow:0 8px 20px rgba(12,12,12,.06);position:relative}
+		.photo img{width:100%;height:100%;object-fit:cover;display:block}
+		.photo::after{content:attr(data-caption);position:absolute;left:10px;bottom:10px;background:rgba(0,0,0,.45);color:#fff;padding:6px 10px;border-radius:8px;font-size:13px}
+		.card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 8px 24px rgba(12,12,12,.05)}
+		.card h3{margin:0 0 8px;color:var(--accent-2)}
+		.small{font-size:14px;color:var(--muted)}
+
+		.heart{font-size:48px;line-height:1}
+		footer{margin-top:28px;text-align:center;color:var(--muted);font-size:14px}
+
+		.tips{line-height:1.6}
+		.tip{margin-bottom:12px}
+
+		@media (max-width:520px){.hero{flex-direction:column;align-items:flex-start}.logo{width:64px;height:64px}}
+
+		/* Custom audio player styles */
+		.audio-wrap{display:flex;flex-direction:column;gap:10px;align-items:flex-start;background:linear-gradient(180deg,rgba(255,255,255,0.9),#fff);padding:10px;border-radius:12px;max-width:420px;box-shadow:0 8px 30px rgba(255,77,122,.06)}
+		.audio-wrap .meta{display:flex;align-items:center;gap:12px;width:100%;justify-content:space-between}
+		.play-btn{background:var(--accent);border:none;color:#fff;padding:10px 14px;border-radius:10px;font-size:16px;cursor:pointer;box-shadow:0 6px 16px rgba(255,77,122,.12)}
+		.play-btn:active{transform:translateY(1px)}
+		.track{flex:1;width:100%;display:flex;align-items:center;gap:10px}
+		.progress{flex:1;height:10px;background:rgba(0,0,0,.08);border-radius:8px;cursor:pointer;position:relative;overflow:hidden}
+		.progress span{display:block;height:100%;width:0%;background:linear-gradient(90deg,var(--accent),var(--accent-2));border-radius:8px}
+		.time{font-size:13px;color:var(--muted)}
+		.vol{appearance:none;height:6px;background:rgba(0,0,0,.08);width:90px;border-radius:6px}
+		.audio-wrap audio{display:none}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<div class="logo"><img src="Foto/3.png" alt="Logo" class="logo-img" onerror="this.onerror=null;this.src='https://via.placeholder.com/84x84.png?text=W';"></div>
+			<div>
+				<h1>Valentine's Day untuk Widya Maharani</h1>
+				<p class="lead">Ide, kejutan, dan tips untuk membuat hari penuh cinta yang tak terlupakan.</p>
+			</div>
+		</header>
+
+		<section class="hero" aria-labelledby="hero-title">
+			<div class="text">
+				<h2 id="hero-title">Happy Valentine's Day, Widya 💖</h2>
+				<p class="small">Untuk hari istimewa ini, jarak mengajarkan kita sesuatu yang tidak bisa diajarkan kedekatan: kesabaran yang berakar, dan rindu yang matang. Di antara kota dan waktu yang berbeda, aku belajar bahwa kehadiran bukan hanya perkara ruang, tetapi keputusan untuk tetap memilih satu sama lain, setiap hari.
+Selamat Hari Valentine.</p>
+			</div>
+			<div style="text-align:center">
+				<div class="heart">🌹</div>
+				<div class="small" style="margin-top:6px">Dengan penuh kasih</div>
+			</div>
+			<div style="margin-top:12px">
+				<div class="audio-wrap" aria-label="Audio player">
+					<audio class="custom-player" preload="none">
+						<source src="Nadhif Basalamah - kota ini tak sama tanpamu.mp3" type="audio/mpeg">
+						Your browser does not support the audio element.
+					</audio>
+					<button class="play-btn" aria-pressed="false" title="Play/Pause">▶</button>
+				</div>
+			</div>
+		</section>
+
+		<main>
+			<div id="special" class="grid">
+				<div class="photo" data-caption="Senja Bersama"><img src="Foto/Senja bersama.png" alt="Senja Bersama" onerror="this.onerror=null;this.src='https://via.placeholder.com/480x320.png?text=Senja+Bersama';"></div>
+				<div class="photo" data-caption="Tawa Kita"><img src="Foto/Tawa kita.png" alt="Tawa Kita" onerror="this.onerror=null;this.src='https://via.placeholder.com/480x320.png?text=Tawa+Kita';"></div>
+				<div class="photo" data-caption="Langkah Baru"><img src="Foto/langka baru.png" alt="Langkah Baru" onerror="this.onerror=null;this.src='https://via.placeholder.com/480x320.png?text=Langkah+Baru';"></div>
+			</div>
+
+			<section class="card" style="margin-top:18px">
+				<h3>Pesan Personal</h3>
+				<p class="small">Widya, semoga hari ini dipenuhi tawa, kenangan manis, dan kejutan kecil yang membuatmu tersenyum. Siapa pun yang merencanakan ini, lakukan dengan perhatian dan ketulusan—itu yang paling berharga.</p>
+				<p style="margin-top:10px">— Dari hati 💌</p>
+			</section>
+
+		</main>
+
+		<footer>
+			<div>Love u sky</div>
+		</footer>
+	</div>
+	<script>
+	// Custom audio player behavior (button-only)
+	document.addEventListener('DOMContentLoaded', function(){
+		const wrap = document.querySelector('.audio-wrap');
+		if(!wrap) return;
+		const audio = wrap.querySelector('audio');
+		const playBtn = wrap.querySelector('.play-btn');
+
+		playBtn.addEventListener('click', function(){
+			if(audio.paused){
+				audio.play();
+			} else {
+				audio.pause();
+			}
+		});
+
+		// If opened via intro (index.html#play), try to start playback immediately
+		if(window.location.hash === '#play'){
+			// user interaction came from previous page click; attempt play
+			audio.play().catch(()=>{
+				// if still blocked, do nothing — user can press play button
+			});
+		}
+
+		audio.addEventListener('play', ()=> playBtn.textContent='❚❚');
+		audio.addEventListener('pause', ()=> playBtn.textContent='▶');
+
+		// space toggles play/pause when button is focused
+		playBtn.addEventListener('keydown', function(e){ if(e.code==='Space'){ e.preventDefault(); playBtn.click(); } });
+	});
+	</script>
+</body>
+</html>

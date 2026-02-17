@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Welcome — Valentine Intro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--accent:#e35a6a}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:linear-gradient(180deg,#f78,#fff0f0)}
+    .wrap{min-height:100%;display:flex;align-items:center;justify-content:center;padding:24px}
+    .card{width:min(920px,96%);background:linear-gradient(180deg,#fff,#fff9);padding:36px;border-radius:18px;box-shadow:0 30px 60px rgba(0,0,0,.12);text-align:center;border:6px solid rgba(255,255,255,.6)}
+    h1{margin:0;font-size:36px;color:#b23}
+    p.sub{margin:8px 0 20px;color:#bb6670}
+    .gift-btn{background:transparent;border:0;padding:0;cursor:pointer}
+    .gift-btn svg{width:260px;height:auto;transition:transform .36s ease}
+    .gift-btn:hover svg{transform:translateY(-6px) scale(1.02)}
+    .note{margin-top:18px;color:#7a2;font-size:14px}
+    @media (max-width:520px){h1{font-size:28px}.gift-btn svg{width:180px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>HAPPY VALENTINES DAY!</h1>
+      <p class="sub">Click the gift to open your surprise</p>
+      <button class="gift-btn" id="openGift" aria-label="Open surprise">
+        <!-- simple heart/gift illustration -->
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="6" y="18" width="52" height="38" rx="6" ry="6" fill="#ffd6d6" stroke="#e56" stroke-width="2"/>
+          <path d="M6 30h52" stroke="#e56" stroke-width="3"/>
+          <path d="M32 6c6 0 10 6 10 10s-4 8-10 8-10-4-10-8 4-10 10-10z" fill="#e56"/>
+          <path d="M32 6c-6 0-10 6-10 10s4 8 10 8" fill="#f9a3b0" opacity="0.8"/>
+        </svg>
+      </button>
+      <div class="note">Jika halaman tidak otomatis memutar musik, tekan tombol play setelah masuk.</div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('openGift').addEventListener('click', function(){
+      // navigate to index and request autoplay via hash
+      window.location.href = 'index.html#play';
+    });
+  </script>
+</body>
+</html>

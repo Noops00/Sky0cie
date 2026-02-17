@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Untuk Widya Maharani — Selamat Hari Valentine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="hero">
+    <div class="card" id="card" role="region" aria-label="Valentine card">
+      <div class="card-top">
+        <div class="photo-frame" id="photoFrame" title="Klik untuk ganti foto (opsional)">
+          <img id="portrait" alt="Foto Widya (opsional)" src=""/>
+          <div class="photo-hint">Tambah Foto</div>
+        </div>
+        <div class="text-area">
+          <h1>Untuk Widya Maharani</h1>
+          <p class="lead">Dengan segala cinta dan kelembutan—Selamat Hari Valentine</p>
+          <p class="lead">Widya, hari ini aku ingin mengingatkan betapa berharganya dirimu. Terima kasih telah hadir dan membuat setiap hari lebih indah. Dengan cinta, selalu</p>
+        </div>
+      </div>
+      <p class="text-area">Semoga hari ini dipenuhi senyum, pelukan hangat, dan kenangan manis.</p>
+      <div class="controls">
+        <button id="openMessage" class="btn">Buka Pesan</button>
+        <button id="toggleMusic" class="btn ghost">Play Musik</button>
+      </div>
+    </div>
+  </main>
+
+  <input id="audioInput" type="file" accept="audio/*" style="display:none">
+  <input id="imageInput" type="file" accept="image/*" style="display:none">
+
+  <div id="confetti-root" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
